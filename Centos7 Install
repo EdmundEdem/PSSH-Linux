@@ -1,0 +1,24 @@
+
+Command to Install PSSH 
+yum install pssh -y
+
+create SSH key from a remote host
+ssh-keygen
+
+copy public key to remote server
+ssh-copy-id root@195.44.200.10
+
+
+create the host files
+vi ~/.pssh_hosts_files
+
+paste the login to servers, example
+root@195.44.200.10
+root@195.44.200.11
+root@195.44.200.12
+
+run command to all hosts, example check uptime on servers
+pssh -i -h ~/.pssh_hosts_files uptime
+
+
+
